@@ -30,9 +30,15 @@ EXPLAIN ANALYZE -> results/explain-analyze.txt
 
 ### Test #2: Insert speed with different **innodb_flush_log_at_trx_commit** settings
 
+#### Command:
+
 ```bash
 chmod +x ./scripts/siege.sh
 ./scripts/siege.sh
 ```
 
-<!-- 40542667 -->
+#### Results:
+
+```bash
+  results/siege.txt
+```
