@@ -1,0 +1,18 @@
+WITHOUT INDEX
+
+SELECT * FROM users WHERE date_of_birth BETWEEN '1990-01-01' AND '1990-01-02' LIMIT 100
+[2025-01-20 11:25:21] 100 rows retrieved starting from 1 in 5 s 176 ms (execution: 5 s 124 ms, fetching: 52 ms)
+
+------------------------------------------------------------------------------
+
+BTREE INDEX
+
+SELECT * FROM users WHERE date_of_birth BETWEEN '1990-01-01' AND '1990-01-02' LIMIT 100
+[2025-01-20 10:27:55] 100 rows retrieved starting from 1 in 82 ms (execution: 14 ms, fetching: 68 ms)
+
+------------------------------------------------------------------------------
+
+HASH INDEX
+
+SELECT * FROM users WHERE date_of_birth BETWEEN '1990-01-01' AND '1990-01-02' LIMIT 100
+[2025-01-20 11:30:20] 100 rows retrieved starting from 1 in 67 ms (execution: 15 ms, fetching: 52 ms)
